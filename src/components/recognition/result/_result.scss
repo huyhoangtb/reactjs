@@ -1,0 +1,167 @@
+$primary-color: #333;
+$header-color: #0c8254;
+$text-color: #5d723d;
+$spelling-color: #3da4dc;
+
+$progress-bg-color: #c6c6c6;
+$red: #e51515;
+$corect-color: #8db420;
+
+.d-result-recognition {
+  .ui-cursor-pointer {
+    cursor: pointer;
+  }
+
+  .ui-try-again-panel {
+    margin: 20px 0;
+    .ui-button {
+      background-color: #0c8254 !important;
+      color: #ffffff !important;
+      text-transform: uppercase;
+      border-radius: 20% !important;
+      padding: 0 50px !important;
+    }
+  }
+
+  .table-panel {
+    border: 1px solid rgb(224, 224, 224);
+  }
+  .result-data {
+    @media only screen and (min-width: 769px) {
+      max-width: 500px;
+    }
+    @media only screen and (max-width: 768px) {
+      max-width: 100%;
+    }
+    thead {
+      background-color: #d3d3d3;
+      tr {
+        th {
+          div {
+            span {
+              color: #111111;
+            }
+          }
+        }
+      }
+
+    }
+
+    .ui-speaker {
+      position: relative !important;
+      border-width: 0.25em !important;
+    }
+
+    .ui-word-head {
+      color: #111111 !important;
+      font-weight: bold;
+    }
+    .ui-guild-head {
+      color: #111111 !important;
+      font-weight: bold;
+    }
+    .ui-word {
+      width: 50%;
+      //text-align: center !important;
+      font-size: 18px !important;
+    }
+    .ui-guild {
+      width: 25%;
+      text-align: center !important;
+      font-size: 18px !important;
+    }
+  }
+
+  .progress-panel {
+
+    @media only screen and (min-width: 769px) {
+      width: 450px;
+    }
+    @media only screen and (max-width: 768px) {
+      max-width: 100%;
+    }
+
+    padding: 0 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin: 30px 0;
+    background-color: $progress-bg-color;
+    text-align: left;
+    position: relative;
+
+    .progress-score {
+      display: inline-block;
+      width: 10%;
+      text-align: center;
+    }
+
+    .score {
+      border-radius: 50%;
+      width: 50px;
+      padding: 13px 0;
+      position: absolute;
+      border: 3px solid #ee9841;
+      text-align: center;
+      top: -14px;
+      background: white;
+    }
+
+    .progress-bg {
+      background-color: #8db420;
+      display: inline-block;
+      padding: 0 20px;
+      height: 20px;
+      border-radius: 20px;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .icon-size {
+    font-size: 20px;
+  }
+
+  .text-color-blue {
+    color: $spelling-color;
+  }
+
+  .corect-color {
+    color: $corect-color;
+  }
+
+  .text-color-red {
+    color: $red;
+  }
+}
+
+.d-recognition-speaker {
+
+  .ui-content-panel {
+    padding: 65px 10px 30px 10px;
+    text-align: center;
+
+    .ui-content-center {
+      display: inline-block;
+      text-align: center;
+      position: relative;
+
+      .ui-text-content {
+        margin-left: 55px;
+        display: inline-block;
+
+        .ui-text {
+          text-align: left;
+          color: $text-color;
+          font-size: 22px;
+        }
+
+        .ui-spelling {
+          color: $spelling-color;
+          font-size: 18px;
+        }
+      }
+    }
+
+  }
+}
