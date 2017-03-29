@@ -3,9 +3,11 @@
  */
 import {combineReducers} from 'redux'
 import user from 'reducers/user-reducer';
+import {routerReducer} from 'react-router-redux';
 
-const AppStore = combineReducers({
-    user
+const AppReducers = combineReducers({
+    user,
+    router: routerReducer
 });
 
-export default AppStore;
+export default AppReducers;
