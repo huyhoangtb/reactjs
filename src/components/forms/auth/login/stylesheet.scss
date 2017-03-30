@@ -1,0 +1,40 @@
+@import "../stylesheet";
+
+.ui-auth-panel {
+.login-by-another-tools {
+
+}
+  .color-default {
+    color: $login-default-color !important;
+  }
+  .remember-me-panel {
+    padding: 10px 0;
+  }
+
+  .ui-button-group {
+    padding: 10px 0;
+  }
+
+  .active {
+    color: $main-color;
+    font-size: 34px;
+
+    span {
+      font-size: 34px;
+      color: $login-default-color;
+      display: inline;
+    }
+  }
+  .active:hover {
+    color: $main-color-hover;
+  }
+  a {
+    color: $login-default-color;
+    cursor: pointer;
+    text-decoration: none;
+    span {
+      color: $login-default-color;
+      display: none;
+    }
+  }
+}

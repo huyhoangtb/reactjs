@@ -3,7 +3,7 @@ const path = require('path');
 var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-const cssConfiguration = path.resolve(__dirname, "src/config");
+const cssConfiguration = path.resolve(__dirname, "src/configs");
 const PATHS = {
     app: path.join(__dirname, 'src'),
     build: path.join(__dirname, "public/resources/js")
@@ -16,7 +16,7 @@ module.exports = {
         modules: [path.resolve(__dirname, "src"), 'node_modules'],
         alias: {
             config: path.join(PATHS.app, 'config', 'configuration.js'),
-            cssConfiguration
+            cssConfiguration,
         },
         mainFiles: ["index"]
     },
@@ -56,7 +56,6 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                exclude: /node_modules/,
                 use: ['style-loader', 'css-loader']
             },
             {

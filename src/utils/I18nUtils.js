@@ -2,7 +2,7 @@
  * Created by Peter Hoang Nguyen on 3/29/2017.
  */
 import {injectIntl} from 'react-intl';
-import  config from '../config/configuration';
+import  config from 'configs/configuration';
 
 /**
  * How to use:
@@ -40,6 +40,10 @@ class I18nUtils {
             type = this.MESSAGES_NORMAL;
         }
         let message = intl.formatMessage({...properties, id: id});
+        if(message && !message.hasOwnProperty(id)) {
+            this.processMissingKey(intl.locale, id);
+            message = message.replace(/_/g, " ");
+        }
         switch (type) {
             case this.MESSAGES_NORMAL:
                 break;
@@ -56,14 +60,13 @@ class I18nUtils {
                 message = capitalizeString(message);
                 break;
         }
-        this.processMissingKey(intl, id);
+
         return message;
     }
 
-    processMissingKey(intl, id) {
-        let messages = intl.messages;
-        if (config.autoDetectMissingMessage && messages && messages.hasOwnProperty(id)) {
-            // send ajax
+    processMissingKey(locale, messagesId) {
+        if (config.autoDetectMissingMessage) {
+            // send ajax locale, messagesId
         }
     }
 }

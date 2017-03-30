@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 import AppReducers from 'reducers/AppStore';
 import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux';
 import {devToolsEnhancer} from 'redux-devtools-extension';
-import Login from 'components/commons/login';
+import Login from 'components/forms/auth/login';
 import Logout from 'components/commons/logout';
 import ContactPage from 'components/pages/contact';
 import createBrowserHistory from 'history/createBrowserHistory'

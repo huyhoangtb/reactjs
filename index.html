@@ -2,11 +2,31 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
         <!--<link href="public/resources/css/styles.css" rel="stylesheet" type="text/css">-->
+        <style>
+            body {
+                padding: 0;
+                margin: auto;
+            }
+
+        </style>
     </head>
     <body>
+    <div className="container-fluid ui-login-panel">
+        <div className="row ">
+            <div className="col-md-4 ui-left-lpanel">
+                fafaf
+            </div>
+            <div className="col-md-4">
+                {this.props.children}
+            </div>
+            <div className="col-md-4">
+                {this.props.children}
+            </div>
+        </div>
+    </div>
         <div id="app"></div>
         <script src="public/resources/js/commons.js"></script>
         <script src="public/resources/js/app.js"></script>

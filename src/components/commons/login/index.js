@@ -11,12 +11,11 @@ class Login extends React.Component {
     render() {
         let {intl, user} =this.props;
         return (
-            <div className="ui-login-panel1">
-                {t1(intl, "day la cai gi")}
-                <a href="http://xpeak.vn" target="_blank">
-                    <img className="xpeak-icon" src="/public/resources/images/icons/xpeak-icon.png"/>
-                </a>
-            </div>
+            adsfasfasfa
+            <popup>
+                <loginForm></loginForm>
+
+            </popup>
         );
     }
 }
