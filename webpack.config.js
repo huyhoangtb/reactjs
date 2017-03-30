@@ -12,7 +12,7 @@ const PATHS = {
 module.exports = {
 
     resolve: {
-        extensions: ['.js','.jsx', '.scss', '.css'],
+        extensions: ['.js', '.jsx', '.scss', '.css'],
         modules: [path.resolve(__dirname, "src"), 'node_modules'],
         alias: {
             config: path.join(PATHS.app, 'config', 'configuration.js'),
