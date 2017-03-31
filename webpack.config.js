@@ -23,19 +23,14 @@ module.exports = {
 
     entry: {
         app: [path.join(PATHS.app, 'index.js')],
-        commons: ["react", "redux", "react-redux"]
+        commons: ["react", "redux", "react-redux", "webpack-dev-server/client?http://localhost:80", "webpack/hot/only-dev-server", "./src/index.js"],
     },
     output: {
         path: path.join(PATHS.build),
-        publicPath: PATHS.app,
+        publicPath: '/public/resources/js/',
         filename: "[name].js",
         chunkFilename: "chunks/js/[id].js",
     },
-
-    // output: {
-    //     path: path.resolve(__dirname, 'public/resources/js'),
-    //     filename: 'app.bundle.js'
-    // },
 
     module: {
         loaders: [
@@ -66,15 +61,31 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({name: "commons", filename: "commons.js"}),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "commons",
+            filename: "commons.js"
+        }),
         new ExtractTextPlugin({
             filename: (getPath) => {
                 return getPath('css/[name].css').replace('css/js', 'css');
             },
             allChunks: true
         }),
-        // new webpack.optimize.UglifyJsPlugin(),
-        // new HtmlWebpackPlugin({template: './src/index.html'})
+        new webpack.HotModuleReplacementPlugin(),
+        // removes a lot of debugging code in React
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
+        }),
+        // keeps hashes consistent between compilations
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        // minifies your code
+        new webpack.optimize.UglifyJsPlugin({
+            compressor: {
+                warnings: false
+            }
+        })
 
     ],
     stats: {
@@ -82,6 +93,8 @@ module.exports = {
     },
     devtool: 'source-map',
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true,
+        contentBase : "./"
     }
 };

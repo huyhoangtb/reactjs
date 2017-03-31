@@ -14,7 +14,6 @@ const renderCheckbox = ({input, label, meta: {touched, error}, ...custom}) => (
 
 )
 
-
 /**
  * Created by Peter Hoang Nguyen
  * Email: vntopmas@gmail.com

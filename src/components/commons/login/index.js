@@ -11,10 +11,9 @@ class Login extends React.Component {
     render() {
         let {intl, user} =this.props;
         return (
-            adsfasfasfa
+
             <popup>
                 <loginForm></loginForm>
-
             </popup>
         );
     }

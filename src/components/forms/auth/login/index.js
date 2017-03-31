@@ -54,7 +54,7 @@ class LoginForm extends React.Component {
                         </div>
 
                         <div className="login-by-another-tools">
-
+HaHAaaaaaaaaa
                         </div>
                     </div>
 
