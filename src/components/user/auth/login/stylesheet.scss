@@ -1,0 +1,79 @@
+@import "~cssConfiguration/css-configuration.scss";
+.ui-auth-panel {
+  .login-by-another-tools {
+
+  }
+  .color-default {
+    color: $login-default-color !important;
+  }
+  .remember-me-panel {
+    padding: 10px 0;
+  }
+
+  .ui-button-group {
+    padding: 10px 0;
+  }
+
+  .active {
+    color: $main-color;
+    font-size: 34px;
+
+    span {
+      font-size: 34px;
+      color: $login-default-color;
+      display: inline;
+    }
+  }
+  .active:hover {
+    color: $main-color-hover;
+  }
+  a {
+    color: $login-default-color;
+    cursor: pointer;
+    text-decoration: none;
+    span {
+      color: $login-default-color;
+      display: none;
+    }
+  }
+
+  .content-panel {
+    padding: 100px 20px 150px 20px;;
+    height: 500px;
+  }
+  .center-block {
+    text-align: center;
+    margin: auto;
+  }
+  .forgot-password {
+    font-weight: bold;
+    margin: auto;
+    display: inline-block;
+    padding-top: 15px;
+  }
+  .button {
+    border-radius: 20px !important;
+     button {
+       background-color: $main-color !important;
+       border-radius: 20px !important;
+       margin-right: 30px !important;
+     };
+
+  }
+  .ui-left-lpanel {
+    background-color: $main-color;
+    background-image: url($mediaPath + "/images/login/login_left_bg.png");
+    background-position: 10px bottom;
+    background-repeat: no-repeat;
+
+    .company-short-name {
+      color: $login-short-company-color;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    .ui-logo-panel {
+      margin-bottom: 10px;
+    }
+  }
+}

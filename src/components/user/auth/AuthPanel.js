@@ -1,7 +1,7 @@
 /**
  * Created by Peter Hoang Nguyen on 3/30/2017.
  */
-import * as css from './stylesheet.scss';
+import * as css from '../../forms/auth/stylesheet.scss';
 import React from 'react'
 import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 import config from 'configs/configuration';
